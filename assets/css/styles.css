@@ -1,0 +1,493 @@
+html{
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #f2f2f2;
+}
+.bold{
+  font-weight: bold;
+}
+header {
+  background-color: #f5f5f5;
+  padding: 10px 20px;
+  margin-bottom: 40px;
+}
+#content-news{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#navbar-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#navbar-wrapper img {
+  height: 15vh; /* Ajuste conforme necessário */
+}
+#navbar-wrapper ul {
+  display: flex;
+  align-items: center;
+}
+.navbar-li {
+  margin: 0 15px;
+}
+
+.navbar-li a {
+  font-size: 1em;
+  color: #333;
+  font-weight: 500;
+}
+
+.navbar-li a:hover {
+  transition: 0.9s;
+  opacity: 0.7;
+}
+
+.button-navbar {
+  margin-left: 15px;
+}
+
+.button-navbar button {
+  background-color: transparent;
+  border: none;
+  height: 10px;
+}
+
+.button-navbar button #iconeTema {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.7s;
+  cursor: pointer;
+}
+.button-navbar button #iconeTema:hover {
+  opacity: 0.7;
+  transition: 0.7s;
+}
+
+/* Estilos para tema escuro */
+body.escuro {
+  background-color: #1a1a1a;
+  color: #FFFFFF;
+}
+
+body.escuro header {
+  background-color: #1a1a1a; /* Cor para o tema escuro */
+}
+
+body.escuro .navbar-li a {
+  color: #CCCCCC;
+}
+body.escuro .content-score-matches,
+body.escuro #content-wrapper-Outstanding-Teams{
+  background-color: #1C1C1C;
+}
+body.escuro .front-card{
+  box-shadow: 0px 0px 5px #E0F7FA;
+}
+body.escuro .back-card{
+  background-color: transparent;
+  color: #fff;
+}
+
+#content-wrapper-news figure{
+  width: 10vw;
+  height: 50vh;
+}
+section{
+  margin-bottom: 40px;
+}
+
+#content-wrapper-news {
+  position: relative;
+  width: 80%;
+  height: 60vh;
+  background: #242424;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Imagens */
+#content-wrapper-news img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  animation: fade 1s;
+}
+/* Setas */
+.arrow-left, .arrow-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  color: white;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+  z-index: 10;
+  background-color: #242424;
+  border-radius: 50%;
+}
+
+.arrow-left { left: 20px; }
+.arrow-right { right: 20px; }
+
+.arrow-left:hover, .arrow-right:hover {
+  opacity: 1;
+}
+
+/* Paginação */
+.paginacao {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 5;
+  background: transparent;
+}
+
+.paginacao .dot {
+  width: 12px;
+  height: 12px;
+  border: 2px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+}
+
+.paginacao .dot.active {
+  background-color: white;
+}
+#content-wrapper-Outstanding-Teams{
+  background-color: gray;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  gap: 70px;
+  padding: 200px;
+}
+#content-wrapper-Outstanding-Teams #box-teams-images{
+  display: flex;
+  justify-content: space-around;
+  gap: 50px;
+}
+.teams-images{
+  width: 150px;
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.8s ease-in-out;
+  cursor: pointer;
+}
+.teams-images:hover{
+  transition: 0.9s;
+  transform: scale(1.5);
+}
+.teams-images:first-child{
+  background-image: url("../img/sadaLogo.png");
+}
+.teams-images:nth-child(2){
+  background-image: url("../img/renataLogo.png");
+}
+.teams-images:nth-child(3){
+  background-image: url("../img/sesiLogo.png");
+}
+.teams-images:nth-child(4){
+  background-image: url("../img/vedacitLogo.png");
+}
+.teams-images:nth-child(5){
+  background-image: url("../img/itambeminasLogo.png");
+}
+.teams-images:last-child{
+  background-image: url("../img/suzanoLogo.png");
+}
+#content-wrapper-score{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.content-score-matches{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  height: 22vh;
+  background-color: #dfdfdf;
+}
+.content-home-team{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.content-visitant{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-direction: row-reverse;
+}
+.image-team{
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+}
+.teams-names{
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.score{
+  font-size: 2rem;
+}
+#image-apa{
+  background-image: url("../img/apanLogo.png");
+}
+#image-neu{
+  background-image: url("../img/neurologiaAtivaLogo.png");
+}
+#image-sdc{
+  background-image: url("../img/sadaLogo.png");
+}
+#image-sec{
+  background-image: url("../img/suzanoLogo.png");
+}
+#image-goi{
+  background-image: url("../img/goiasLogo.png");
+}
+#image-ses{
+  background-image: url("../img/sesiLogo.png");
+}
+#image-mtc{
+  background-image: url("../img/itambeminasLogo.png");
+}
+#image-joi{
+  background-image: url("../img/joinvilleLogo.png");
+}
+#content-wrapper-selection{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:  50px;
+  margin: 0 auto;
+  width: 90%;
+  margin-bottom: 40px;
+}
+#text-selection {
+  text-align: center;
+}
+.content-nation{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.content-nation .title-nation {
+  margin: 0 30px;
+}
+.content-nation .row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 50px;
+}
+
+/* Cards Brazilian national team */
+.card {
+  position: relative;
+  height: 242px;
+  width: 144px;
+}
+.flip {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+}
+.front-card,
+.back-card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0px 0px 10px #000000be;
+  backface-visibility: hidden;
+}
+.front-card {
+  background: center / cover no-repeat;
+}
+.back-card {
+  background-color: #fff;
+  color: #000;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  margin: 0 auto;
+}
+.back-card p{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 1.15em;
+  width: 40%;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+.card:hover .flip {
+  transform: rotateY(180deg);
+}
+.img-card {
+  width: 100%;
+  height: 100%;
+  background: center / cover no-repeat;
+}
+/* Images of Brazilian national team */
+.row .card:nth-child(1) .img-card{
+  background-image: url("../img/adrianoCard.png");
+}
+.row .card:nth-child(2) .img-card {
+  background-image: url("../img/alanCard.png");
+}
+.row .card:nth-child(3) .img-card {
+  background-image: url("../img/bergmannCard.png");
+}
+.row .card:nth-child(4) .img-card {
+  background-image: url("../img/bruninhoCard.png");
+}
+.row .card:nth-child(5) .img-card {
+  background-image: url("../img/krelingCard.png");
+}
+.row .card:nth-child(6) .img-card {
+  background-image: url("../img/darlanCard.png");
+}
+.row:nth-of-type(2)  .card:nth-child(1) .img-card {
+  background-image: url("../img/flavioCard.png");
+}
+.row:nth-of-type(2)  .card:nth-child(2) .img-card {
+  background-image: url("../img/isacCard.png");
+}
+.row:nth-of-type(2)  .card:nth-child(3) .img-card {
+  background-image: url("../img/lealCard.png");
+}
+.row:nth-of-type(2)  .card:nth-child(4) .img-card {
+  background-image: url("../img/gibaCard.png");
+}
+.row:nth-of-type(2)  .card:nth-child(5) .img-card {
+  background-image: url("../img/lucarelliCard.png");
+}
+.row:nth-of-type(2)  .card:nth-child(6) .img-card {
+  background-image: url("../img/thalesCard.png");
+}
+.content-nation:nth-of-type(2) .row  .card:nth-child(1) .img-card {
+  background-image: url("../img/dianaCard.png");
+}
+.content-nation:nth-of-type(2) .row  .card:nth-child(2) .img-card {
+  background-image: url("../img/tainaraCard.png");
+}
+.content-nation:nth-of-type(2) .row  .card:nth-child(3) .img-card {
+  background-image: url("../img/thaisaCard.png");
+  background-position: center 8px;
+}
+.content-nation:nth-of-type(2) .row  .card:nth-child(4) .img-card {
+  background-image: url("../img/juliaCard.png");
+}
+.content-nation:nth-of-type(2) .row  .card:nth-child(5) .img-card {
+  background-image: url("../img/lorenneCard.png");
+}
+.content-nation:nth-of-type(2) .row  .card:nth-child(6) .img-card {
+  background-image: url("../img/macrisCard.png");
+}
+.content-nation:nth-of-type(2) .row:nth-of-type(2) .card:nth-child(1) .img-card {
+  background-image: url("../img/nyemeCard.png");
+}
+.content-nation:nth-of-type(2) .row:nth-of-type(2) .card:nth-child(2) .img-card{
+  background-image: url("../img/robertaCard.png");
+  background-position: center 7px;
+}
+.content-nation:nth-of-type(2) .row:nth-of-type(2) .card:nth-child(3) .img-card{
+  background-image: url("../img/rosamariaCard.png");
+}
+.content-nation:nth-of-type(2) .row:nth-of-type(2) .card:nth-child(4) .img-card{
+  background-image: url("../img/gabiCard.png");
+}
+.content-nation:nth-of-type(2) .row:nth-of-type(2) .card:nth-child(5) .img-card{
+  background-image: url("../img/carolCard.png");
+}
+.content-nation:nth-of-type(2) .row:nth-of-type(2) .card:nth-child(6) .img-card{
+  background-image: url("../img/anaCard.png");
+}
+footer{
+  background-color: #212121;
+  min-height: 50vh;
+  max-height: 140vh;
+}
+.footer{
+  display: flex;  
+  justify-content: space-around;
+  align-items: center;  
+  padding: 50px 0;
+}
+.footer:last-child{
+  flex-direction: column;
+}
+.footer:first-child{
+  border-bottom: 1px solid #fff;
+}
+#content-img-footer{
+  display: flex;
+  gap: 10px;
+}
+.footer li a,
+.footer li,
+footer p{
+  color: #fff;
+  line-height: 22px;
+}
+.footer li a:hover{
+  opacity: 0.5;
+  transition: 0.9s;
+}
+.footer li:first-child{
+  line-height: 40px;
+}
+#content-img-footer li a img{
+  width: 50px;
+}
+
+
+
+
+
+
+/* Animação */
+@keyframes fade {
+  from { opacity: 0.3; }
+  to { opacity: 1; }
+}
