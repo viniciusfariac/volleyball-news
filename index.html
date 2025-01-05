@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
+
+    <!-- Meta -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=7" />
@@ -8,10 +10,19 @@
       name="description"
       content="Site de voleibol,volei para você, convocações brasileiras, fundamentos volei, posições volei, Conquistas brasileiras volei, conquistas brasileiras feminina volei, conquistas brasileiras masculinas volei, convocações volei, dicas para volei"
     />
+
+    <!-- Title -->
     <title>Volei pra voce</title>
+
+    <!-- BootStrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
     <!-- Style CSS -->
     <link rel="stylesheet" href="assets/css/reset.css" />
     <link rel="stylesheet" href="assets/css/styles.css" />
+
+    
+
     <!-- Import Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,10 +49,8 @@
             <li class="navbar-li">
                 <a href="#content-nation-female">Seleção Feminina</a>
             </li>
-            <li class="button-navbar">
-                <button id="btn-change-color" onclick="alternarTema()">
-                    <img id="iconeTema" src="img/lua.png" alt="Ícone de Tema" />
-                </button>
+            <li class="navbar-icon">
+                <i id="toggleTheme" class="bi bi-sun" onclick="switchTheme()"></i>
             </li>
         </ul>
       </nav>

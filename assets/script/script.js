@@ -9,14 +9,14 @@ let time = 5000; // Tempo para transição automática
 
 // Função para definir classes e visibilidade
 const defClass = (startPos, index) => {
-    // Esconde todas as imagens e reseta os dots
-    for (let i = startPos; i < imgs.length; i++) {
-        imgs[i].style.display = "none";
-        dots[i].classList.remove("active");
-    }
-    // Mostra a imagem atual e atualiza o dot
-    imgs[index].style.display = "block";
-    dots[index].classList.add("active");
+  // Esconde todas as imagens e reseta os dots
+  for (let i = startPos; i < imgs.length; i++) {
+    imgs[i].style.display = "none";
+    dots[i].classList.remove("active");
+  }
+  // Mostra a imagem atual e atualiza o dot
+  imgs[index].style.display = "block";
+  dots[index].classList.add("active");
 };
 
 // Inicializa o slider
@@ -24,43 +24,38 @@ defClass(1, 0);
 
 // Event Listeners para as setas
 leftArrow.addEventListener("click", function () {
-    currentIndex <= 0 ? currentIndex = imgs.length - 1 : currentIndex--;
-    defClass(0, currentIndex);
+  currentIndex <= 0 ? (currentIndex = imgs.length - 1) : currentIndex--;
+  defClass(0, currentIndex);
 });
 
 rightArrow.addEventListener("click", function () {
-    currentIndex >= imgs.length - 1 ? currentIndex = 0 : currentIndex++;
-    defClass(0, currentIndex);
+  currentIndex >= imgs.length - 1 ? (currentIndex = 0) : currentIndex++;
+  defClass(0, currentIndex);
 });
 
 // Event Listeners para os dots
 dots.forEach((dot, index) => {
-    dot.addEventListener("click", () => {
-        currentIndex = index;
-        defClass(0, currentIndex);
-    });
+  dot.addEventListener("click", () => {
+    currentIndex = index;
+    defClass(0, currentIndex);
+  });
 });
 
 // Função para iniciar o slideshow automático
 const startAutoSlide = () => {
-    setInterval(() => {
-        currentIndex >= imgs.length - 1 ? currentIndex = 0 : currentIndex++;
-        defClass(0, currentIndex);
-    }, time);
+  setInterval(() => {
+    currentIndex >= imgs.length - 1 ? (currentIndex = 0) : currentIndex++;
+    defClass(0, currentIndex);
+  }, time);
 };
 
 // Inicia o slideshow automático
 startAutoSlide();
 
-function alternarTema() {
-    document.body.classList.toggle("escuro");
-    const iconeTema = document.getElementById("iconeTema");
+function switchTheme() {
+  document.body.classList.toggle("black");
+  const iconeTema = document.getElementById("toggleTheme");
 
-    if (document.body.classList.contains("escuro")) {
-        iconeTema.src = "img/sol.png"; // Caminho para o ícone da lua no tema escuro
-        iconeTema.alt = "Lua";
-    } else {
-        iconeTema.src = "img/lua.png"; // Caminho para o ícone do sol no tema claro
-        iconeTema.alt = "Sol";
-    }
+  iconeTema.classList.toggle("bi-sun");
+  iconeTema.classList.toggle("bi-moon-stars");
 }

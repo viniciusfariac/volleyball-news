@@ -1,18 +1,27 @@
-html{
+html {
   scroll-behavior: smooth;
 }
 body {
   background-color: #f2f2f2;
 }
-.bold{
+.bold {
   font-weight: bold;
+}
+i {
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+}
+i:hover {
+  transition: 0.5s;
+  opacity: 0.7;
 }
 header {
   background-color: #f5f5f5;
   padding: 10px 20px;
   margin-bottom: 40px;
 }
-#content-news{
+#content-news {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,6 +37,7 @@ header {
 #navbar-wrapper ul {
   display: flex;
   align-items: center;
+  height: 100%;
 }
 .navbar-li {
   margin: 0 15px;
@@ -44,57 +54,43 @@ header {
   opacity: 0.7;
 }
 
-.button-navbar {
-  margin-left: 15px;
-}
-
-.button-navbar button {
-  background-color: transparent;
-  border: none;
-  height: 10px;
-}
-
-.button-navbar button #iconeTema {
-  width: 50px;
-  height: 50px;
-  transition: transform 0.7s;
-  cursor: pointer;
-}
-.button-navbar button #iconeTema:hover {
-  opacity: 0.7;
-  transition: 0.7s;
+.navbar-li .navbar-icon {
+  height: 100%;
 }
 
 /* Estilos para tema escuro */
-body.escuro {
+body.black {
   background-color: #1a1a1a;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
-body.escuro header {
-  background-color: #1a1a1a; /* Cor para o tema escuro */
+body.black header {
+  background-color: #1a1a1a; /* Cor para o tema black */
 }
 
-body.escuro .navbar-li a {
-  color: #CCCCCC;
+body.black .navbar-li a {
+  color: #cccccc;
 }
-body.escuro .content-score-matches,
-body.escuro #content-wrapper-Outstanding-Teams{
-  background-color: #1C1C1C;
+body.black .content-score-matches,
+body.black #content-wrapper-Outstanding-Teams {
+  background-color: #1c1c1c;
 }
-body.escuro .front-card{
-  box-shadow: 0px 0px 5px #E0F7FA;
+body.black .front-card {
+  box-shadow: 0px 0px 5px #e0f7fa;
 }
-body.escuro .back-card{
+body.black .back-card {
   background-color: transparent;
   color: #fff;
 }
+body.black i {
+  color: #fff;
+}
 
-#content-wrapper-news figure{
+#content-wrapper-news figure {
   width: 10vw;
   height: 50vh;
 }
-section{
+section {
   margin-bottom: 40px;
 }
 
@@ -120,7 +116,8 @@ section{
   animation: fade 1s;
 }
 /* Setas */
-.arrow-left, .arrow-right {
+.arrow-left,
+.arrow-right {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -139,10 +136,15 @@ section{
   border-radius: 50%;
 }
 
-.arrow-left { left: 20px; }
-.arrow-right { right: 20px; }
+.arrow-left {
+  left: 20px;
+}
+.arrow-right {
+  right: 20px;
+}
 
-.arrow-left:hover, .arrow-right:hover {
+.arrow-left:hover,
+.arrow-right:hover {
   opacity: 1;
 }
 
@@ -173,7 +175,7 @@ section{
 .paginacao .dot.active {
   background-color: white;
 }
-#content-wrapper-Outstanding-Teams{
+#content-wrapper-Outstanding-Teams {
   background-color: gray;
   color: white;
   display: flex;
@@ -184,12 +186,12 @@ section{
   gap: 70px;
   padding: 200px;
 }
-#content-wrapper-Outstanding-Teams #box-teams-images{
+#content-wrapper-Outstanding-Teams #box-teams-images {
   display: flex;
   justify-content: space-around;
   gap: 50px;
 }
-.teams-images{
+.teams-images {
   width: 150px;
   height: 150px;
   background-size: cover;
@@ -200,36 +202,36 @@ section{
   transition: transform 0.8s ease-in-out;
   cursor: pointer;
 }
-.teams-images:hover{
+.teams-images:hover {
   transition: 0.9s;
   transform: scale(1.5);
 }
-.teams-images:first-child{
+.teams-images:first-child {
   background-image: url("../img/sadaLogo.png");
 }
-.teams-images:nth-child(2){
+.teams-images:nth-child(2) {
   background-image: url("../img/renataLogo.png");
 }
-.teams-images:nth-child(3){
+.teams-images:nth-child(3) {
   background-image: url("../img/sesiLogo.png");
 }
-.teams-images:nth-child(4){
+.teams-images:nth-child(4) {
   background-image: url("../img/vedacitLogo.png");
 }
-.teams-images:nth-child(5){
+.teams-images:nth-child(5) {
   background-image: url("../img/itambeminasLogo.png");
 }
-.teams-images:last-child{
+.teams-images:last-child {
   background-image: url("../img/suzanoLogo.png");
 }
-#content-wrapper-score{
+#content-wrapper-score {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 50px;
 }
-.content-score-matches{
+.content-score-matches {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -237,62 +239,62 @@ section{
   height: 22vh;
   background-color: #dfdfdf;
 }
-.content-home-team{
+.content-home-team {
   display: flex;
   align-items: center;
   gap: 30px;
 }
-.content-visitant{
+.content-visitant {
   display: flex;
   align-items: center;
   gap: 30px;
   flex-direction: row-reverse;
 }
-.image-team{
+.image-team {
   width: 90px;
   height: 90px;
   border-radius: 50%;
   background-position: center;
   background-size: cover;
 }
-.teams-names{
+.teams-names {
   font-size: 1.1rem;
   font-weight: bold;
   text-transform: uppercase;
 }
-.score{
+.score {
   font-size: 2rem;
 }
-#image-apa{
+#image-apa {
   background-image: url("../img/apanLogo.png");
 }
-#image-neu{
+#image-neu {
   background-image: url("../img/neurologiaAtivaLogo.png");
 }
-#image-sdc{
+#image-sdc {
   background-image: url("../img/sadaLogo.png");
 }
-#image-sec{
+#image-sec {
   background-image: url("../img/suzanoLogo.png");
 }
-#image-goi{
+#image-goi {
   background-image: url("../img/goiasLogo.png");
 }
-#image-ses{
+#image-ses {
   background-image: url("../img/sesiLogo.png");
 }
-#image-mtc{
+#image-mtc {
   background-image: url("../img/itambeminasLogo.png");
 }
-#image-joi{
+#image-joi {
   background-image: url("../img/joinvilleLogo.png");
 }
-#content-wrapper-selection{
+#content-wrapper-selection {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap:  50px;
+  gap: 50px;
   margin: 0 auto;
   width: 90%;
   margin-bottom: 40px;
@@ -300,7 +302,7 @@ section{
 #text-selection {
   text-align: center;
 }
-.content-nation{
+.content-nation {
   display: flex;
   flex-direction: column;
   gap: 50px;
@@ -350,7 +352,7 @@ section{
   text-align: center;
   margin: 0 auto;
 }
-.back-card p{
+.back-card p {
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -369,7 +371,7 @@ section{
   background: center / cover no-repeat;
 }
 /* Images of Brazilian national team */
-.row .card:nth-child(1) .img-card{
+.row .card:nth-child(1) .img-card {
   background-image: url("../img/adrianoCard.png");
 }
 .row .card:nth-child(2) .img-card {
@@ -387,107 +389,124 @@ section{
 .row .card:nth-child(6) .img-card {
   background-image: url("../img/darlanCard.png");
 }
-.row:nth-of-type(2)  .card:nth-child(1) .img-card {
+.row:nth-of-type(2) .card:nth-child(1) .img-card {
   background-image: url("../img/flavioCard.png");
 }
-.row:nth-of-type(2)  .card:nth-child(2) .img-card {
+.row:nth-of-type(2) .card:nth-child(2) .img-card {
   background-image: url("../img/isacCard.png");
 }
-.row:nth-of-type(2)  .card:nth-child(3) .img-card {
+.row:nth-of-type(2) .card:nth-child(3) .img-card {
   background-image: url("../img/lealCard.png");
 }
-.row:nth-of-type(2)  .card:nth-child(4) .img-card {
+.row:nth-of-type(2) .card:nth-child(4) .img-card {
   background-image: url("../img/gibaCard.png");
 }
-.row:nth-of-type(2)  .card:nth-child(5) .img-card {
+.row:nth-of-type(2) .card:nth-child(5) .img-card {
   background-image: url("../img/lucarelliCard.png");
 }
-.row:nth-of-type(2)  .card:nth-child(6) .img-card {
+.row:nth-of-type(2) .card:nth-child(6) .img-card {
   background-image: url("../img/thalesCard.png");
 }
-.content-nation:nth-of-type(2) .row  .card:nth-child(1) .img-card {
+.content-nation:nth-of-type(2) .row .card:nth-child(1) .img-card {
   background-image: url("../img/dianaCard.png");
 }
-.content-nation:nth-of-type(2) .row  .card:nth-child(2) .img-card {
+.content-nation:nth-of-type(2) .row .card:nth-child(2) .img-card {
   background-image: url("../img/tainaraCard.png");
 }
-.content-nation:nth-of-type(2) .row  .card:nth-child(3) .img-card {
+.content-nation:nth-of-type(2) .row .card:nth-child(3) .img-card {
   background-image: url("../img/thaisaCard.png");
   background-position: center 8px;
 }
-.content-nation:nth-of-type(2) .row  .card:nth-child(4) .img-card {
+.content-nation:nth-of-type(2) .row .card:nth-child(4) .img-card {
   background-image: url("../img/juliaCard.png");
 }
-.content-nation:nth-of-type(2) .row  .card:nth-child(5) .img-card {
+.content-nation:nth-of-type(2) .row .card:nth-child(5) .img-card {
   background-image: url("../img/lorenneCard.png");
 }
-.content-nation:nth-of-type(2) .row  .card:nth-child(6) .img-card {
+.content-nation:nth-of-type(2) .row .card:nth-child(6) .img-card {
   background-image: url("../img/macrisCard.png");
 }
-.content-nation:nth-of-type(2) .row:nth-of-type(2) .card:nth-child(1) .img-card {
+.content-nation:nth-of-type(2)
+  .row:nth-of-type(2)
+  .card:nth-child(1)
+  .img-card {
   background-image: url("../img/nyemeCard.png");
 }
-.content-nation:nth-of-type(2) .row:nth-of-type(2) .card:nth-child(2) .img-card{
+.content-nation:nth-of-type(2)
+  .row:nth-of-type(2)
+  .card:nth-child(2)
+  .img-card {
   background-image: url("../img/robertaCard.png");
   background-position: center 7px;
 }
-.content-nation:nth-of-type(2) .row:nth-of-type(2) .card:nth-child(3) .img-card{
+.content-nation:nth-of-type(2)
+  .row:nth-of-type(2)
+  .card:nth-child(3)
+  .img-card {
   background-image: url("../img/rosamariaCard.png");
 }
-.content-nation:nth-of-type(2) .row:nth-of-type(2) .card:nth-child(4) .img-card{
+.content-nation:nth-of-type(2)
+  .row:nth-of-type(2)
+  .card:nth-child(4)
+  .img-card {
   background-image: url("../img/gabiCard.png");
 }
-.content-nation:nth-of-type(2) .row:nth-of-type(2) .card:nth-child(5) .img-card{
+.content-nation:nth-of-type(2)
+  .row:nth-of-type(2)
+  .card:nth-child(5)
+  .img-card {
   background-image: url("../img/carolCard.png");
 }
-.content-nation:nth-of-type(2) .row:nth-of-type(2) .card:nth-child(6) .img-card{
+.content-nation:nth-of-type(2)
+  .row:nth-of-type(2)
+  .card:nth-child(6)
+  .img-card {
   background-image: url("../img/anaCard.png");
 }
-footer{
+footer {
   background-color: #212121;
   min-height: 50vh;
   max-height: 140vh;
 }
-.footer{
-  display: flex;  
+.footer {
+  display: flex;
   justify-content: space-around;
-  align-items: center;  
+  align-items: center;
   padding: 50px 0;
 }
-.footer:last-child{
+.footer:last-child {
   flex-direction: column;
 }
-.footer:first-child{
+.footer:first-child {
   border-bottom: 1px solid #fff;
 }
-#content-img-footer{
+#content-img-footer {
   display: flex;
   gap: 10px;
 }
 .footer li a,
 .footer li,
-footer p{
+footer p {
   color: #fff;
   line-height: 22px;
 }
-.footer li a:hover{
+.footer li a:hover {
   opacity: 0.5;
   transition: 0.9s;
 }
-.footer li:first-child{
+.footer li:first-child {
   line-height: 40px;
 }
-#content-img-footer li a img{
+#content-img-footer li a img {
   width: 50px;
 }
 
-
-
-
-
-
 /* Animação */
 @keyframes fade {
-  from { opacity: 0.3; }
-  to { opacity: 1; }
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  }
 }
