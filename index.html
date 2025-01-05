@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7" />
+    <meta
+      name="description"
+      content="Site de voleibol,volei para você, convocações brasileiras, fundamentos volei, posições volei, Conquistas brasileiras volei, conquistas brasileiras feminina volei, conquistas brasileiras masculinas volei, convocações volei, dicas para volei"
+    />
+    <title>Volei pra voce</title>
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <!-- Import Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      
+      <!-- Nav bar -->
+      <nav id="navbar-wrapper">
+        <figure>
+            <img src="assets/img/imglogosite.png" alt="Logo Vôlei pra você brasil" />
+        </figure>
+        <ul>
+            <li class="navbar-li">
+                <a href="#content-wrapper-Outstanding-Teams">Destaques</a>
+            </li>
+            <li class="navbar-li">
+                <a href="#content-wrapper-score">Placares</a>
+            </li>
+            <li class="navbar-li">
+                <a href="#content-nation-masculine">Seleção Masculina</a>
+            </li>
+            <li class="navbar-li">
+                <a href="#content-nation-female">Seleção Feminina</a>
+            </li>
+            <li class="button-navbar">
+                <button id="btn-change-color" onclick="alternarTema()">
+                    <img id="iconeTema" src="img/lua.png" alt="Ícone de Tema" />
+                </button>
+            </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+        <section id="content-news">
+            <div id="content-wrapper-news">
+                    <figure>
+                        <img src="assets/img/gritaria-volei.png" alt="Slide 1" style="display: block;">
+                        <img src="assets/img/levantamento.png" alt="Slide 2">
+                        <img src="assets/img/darlan-pulando.png" alt="Slide 3">
+                        <img src="assets/img/furar-bloqueio.png" alt="Slide 4">
+                    </figure>
+                    
+                    <div class="arrow-left">&#10094;</div>
+                    <div class="arrow-right">&#10095;</div>
+                    
+                    <div class="paginacao">
+                        <div class="dot active"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                </div>
+        </section>
+      <section id="content-wrapper-Outstanding-Teams">
+        <h2>Times de Destaque na Superliga</h2>
+        <div id="box-teams-images">
+            <div class="teams-images"></div>
+            <div class="teams-images"></div>
+            <div class="teams-images"></div>
+            <div class="teams-images"></div>
+            <div class="teams-images"></div>
+            <div class="teams-images"></div>
+        </div>
+      </section>
+      <section id="content-wrapper-score">
+        <h2>Placar dos últimos jogos</h2>
+        <div class="content-score-matches">
+            <div class="content-home-team">
+                <div id="image-apa" class="image-team"></div>
+                <span class="teams-names">Apa</span>
+            </div>
+            <div class="content-score">
+                <span class="bold score">3 X 3</span>
+            </div>
+            <div class="content-visitant">
+                <div id="image-neu" class="image-team"></div>
+                <span class="teams-names">Neu</span>
+            </div>
+        </div>
+        </div>
+        <div class="content-score-matches">
+            <div class="content-home-team">
+                <div id="image-sdc" class="image-team"></div>
+                <span class="teams-names">Sdc</span>
+            </div>
+            <div class="content-score">
+                <span class="bold score">3 X 0</span>
+            </div>
+            <div class="content-visitant">
+                <div id="image-sec" class="image-team"></div>
+                <span class="teams-names">Sec</span>
+            </div>
+        </div>
+        <div class="content-score-matches">
+            <div class="content-home-team">
+                <div id="image-goi" class="image-team"></div>
+                <span class="teams-names">Goi</span>
+            </div>
+            <div class="content-score">
+                <span class="bold score">1 X 3</span>
+            </div>
+            <div class="content-visitant">
+                <div id="image-ses" class="image-team"></div>
+                <span class="teams-names">Ses</span>
+            </div>
+        </div>
+        <div class="content-score-matches">
+            <div class="content-home-team">
+                <div id="image-mtc" class="image-team"></div>
+                <span class="teams-names">Mtc</span>
+            </div>
+            <div class="content-score">
+                <span class="bold score">3 X 0</span>
+            </div>
+            <div class="content-visitant">
+                <div id="image-joi" class="image-team"></div>
+                <span class="teams-names">Joi</span>
+            </div>
+        </div>
+      </section>
+      <section id="content-wrapper-selection">
+        <h2 id="text-selection">Seleção Brasileira</h2>
+        <div class="content-nation" id="content-nation-masculine">
+            <h2 class="title-nation">Seleção masculina</h2>
+            <div class="row">
+                <div class="card">
+                    <div class="flip">
+                        <div class="front-card">
+                            <div class="img-card"></div>
+                        </div>
+                      <div class="back-card">
+                        <p><span class="bold">Nome:</span> Adriano Fernandes </p>
+                        <p><span class="bold">idade:</span> 22</p>
+                        <p><span class="bold">Altura:</span> 2.01</p>
+                    </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="flip">
+                        <div class="front-card">
+                            <div class="img-card"></div>
+                        </div>
+                        <div class="back-card">
+                            <p><span class="bold">Nome:</span> Alan Souza</p>
+                            <p><span class="bold">Idade:</span> 30</p>
+                            <p><span class="bold">Altura:</span> 2.02</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="flip">
+                        <div class="front-card">
+                            <div class="img-card"></div>
+                        </div>
+                        <div class="back-card">
+                            <p><span class="bold">Nome:</span> Bergmann Lukas</p>
+                            <p><span class="bold">idade:</span> 20</p>
+                            <p><span class="bold">Altura:</span> 2.04</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="flip">
+                        <div class="front-card">
+                        <div class="img-card"></div>
+                        </div>
+                        <div class="back-card">
+                            <p><span class="bold">Nome:</span> Bruno Rezende</p>
+                            <p><span class="bold">Idade:</span> 38</p>
+                            <p><span class="bold">Altura:</span> 1.90</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="flip">
+                        <div class="front-card">
+                        <div class="img-card"></div>
+                        </div>
+                        <div class="back-card">
+                            <p><span class="bold">Nome:</span> Kreling Fernando</p>
+                            <p><span class="bold">idade:</span> 28</p>
+                            <p><span class="bold">Altura:</span> 1.86</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="flip">
+                        <div class="front-card">
+                        <div class="img-card"></div>
+                        </div>
+                        <div class="back-card">
+                            <p><span class="bold">Nome:</span> Darlan Fereira</p>
+                            <p><span class="bold">idade:</span> 22</p>
+                            <p><span class="bold">Altura:</span> 1.92</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">  
+                <div class="card">
+                    <div class="flip">
+                        <div class="front-card">
+                        <div class="img-card"></div>
+                        </div>
+                        <div class="back-card">
+                            <p><span class="bold">Nome:</span> Flávio Resende</p>
+                            <p><span class="bold">idade:</span> 31</p>
+                            <p><span class="bold">Altura:</span> 1.99</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="flip">
+                        <div class="front-card card8">
+                        <div class="img-card"></div>
+                        </div>
+                        <div class="back-card">
+                            <p><span class="bold">Nome:</span> Isac Santos</p>
+                            <p><span class="bold">idade:</span> 33</p>
+                            <p><span class="bold">Altura:</span> 2.08</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="flip">
+                        <div class="front-card">
+                        <div class="img-card"></div>
+                        </div>
+                        <div class="back-card">
+                            <p><span class="bold">Nome:</span> Yoandy Leal</p>
+                            <p><span class="bold">idade:</span> 36</p>
+                            <p><span class="bold">Altura:</span> 2.02</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="flip">
+                        <div class="front-card">
+                        <div class="img-card"></div>
+                        </div>
+                        <div class="back-card">
+                            <p><span class="bold">Nome:</span> Lucas Saatkamp</p>
+                            <p><span class="bold">idade:</span> 38</p>
+                            <p><span class="bold">Altura:</span> 2.09</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="flip">
+                        <div class="front-card">
+                        <div class="img-card"></div>
+                        </div>
+                        <div class="back-card">
+                            <p><span class="bold">Nome:</span> Ricardo Lucarelli</p>
+                            <p><span class="bold">idade:</span> 32</p>
+                            <p><span class="bold">Altura:</span> 1.96</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="flip">
+                        <div class="front-card">
+                        <div class="img-card"></div>
+                        </div>
+                        <div class="back-card">
+                            <p><span class="bold">Nome:</span> Thales Hoss</p>
+                            <p><span class="bold">idade:</span> 35</p>
+                            <p><span class="bold">Altura:</span> 1.90</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-nation" id="content-nation-female">
+            <h2 class="title-nation">Seleção feminina</h2>
+            <div class="row">
+                <div class="card">
+                    <div class="flip">
+                        <div class="front-card">
+                            <div class="img-card"></div>
+                        </div>
+                        <div class="back-card">
+                            <p><span class="bold">Nome:</span> Diana Duarte</p>
+                            <p><span class="bold">idade:</span> 25</p>
+                            <p><span class="bold">Altura:</span> 1.94</p>
+                        </div>
+                    </div>
+                  </div>
+                <div class="card">
+                    <div class="flip">
+                        <div class="front-card">
+                        <div class="img-card"></div>
+                        </div>
+                        <div class="back-card">
+                            <p><span class="bold">Nome:</span> Tainara Lemes</p>
+                            <p><span class="bold">idade:</span> 24</p>
+                            <p><span class="bold">Altura:</span> 1.90</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="flip">
+                        <div class="front-card">
+                        <div class="img-card"></div>
+                        </div>
+                        <div class="back-card">
+                            <p><span class="bold">Nome:</span> Thaisa Daher</p>
+                            <p><span class="bold">idade:</span> 37</p>
+                            <p><span class="bold">Altura:</span> 1.96</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="flip">
+                        <div class="front-card">
+                        <div class="img-card"></div>
+                        </div>
+                        <div class="back-card">
+                            <p><span class="bold">Nome:</span> Julia Bergmann</p>
+                            <p><span class="bold">idade:</span> 23</p>
+                            <p><span class="bold">Altura:</span> 1.91</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="flip">
+                        <div class="front-card">
+                        <div class="img-card"></div>
+                        </div>
+                        <div class="back-card">
+                            <p><span class="bold">Nome:</span> Lorenne Geraldo</p>
+                            <p><span class="bold">idade:</span> 28</p>
+                            <p><span class="bold">Altura:</span> 1.97</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="flip">
+                        <div class="front-card">
+                        <div class="img-card"></div>
+                        </div>
+                        <div class="back-card">
+                            <p><span class="bold">Nome:</span> Fernanda Macris</p>
+                            <p><span class="bold">idade:</span> 35</p>
+                            <p><span class="bold">Altura:</span> 1.78</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">  
+                <div class="card">
+                    <div class="flip">
+                        <div class="front-card">
+                        <div class="img-card"></div>
+                        </div>
+                        <div class="back-card">
+                            <p><span class="bold">Nome:</span> Victoria Nyeme</p>
+                            <p><span class="bold">idade:</span> 26</p>
+                            <p><span class="bold">Altura:</span> 1.75</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="flip">
+                        <div class="front-card">
+                        <div class="img-card"></div>
+                        </div>
+                        <div class="back-card">
+                            <p><span class="bold">Nome:</span> Roberta Silva</p>
+                            <p><span class="bold">idade:</span> 34</p>
+                            <p><span class="bold">Altura:</span> 1.85</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="flip">
+                        <div class="front-card">
+                        <div class="img-card"></div>
+                        </div>
+                        <div class="back-card">
+                            <p><span class="bold">Nome:</span> Rosamaria Montibeller</p>
+                            <p><span class="bold">idade:</span> 30</p>
+                            <p><span class="bold">Altura:</span> 1.85</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="flip">
+                        <div class="front-card">
+                        <div class="img-card"></div>
+                        </div>
+                        <div class="back-card">
+                            <p><span class="bold">Nome:</span> Gabriela Guimares</p>
+                            <p><span class="bold">idade:</span> 30</p>
+                            <p><span class="bold">Altura:</span> 1.80</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="flip">
+                        <div class="front-card">
+                        <div class="img-card"></div>
+                        </div>
+                        <div class="back-card">
+                            <p><span class="bold">Nome:</span> Ana Carolina da Silva</p>
+                            <p><span class="bold">idade:</span> 33</p>
+                            <p><span class="bold">Altura:</span> 1.83</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="flip">
+                        <div class="front-card">
+                        <div class="img-card"></div>
+                        </div>
+                        <div class="back-card">
+                            <p><span class="bold">Nome:</span> Ana Cristina De Souza</p>
+                            <p><span class="bold">idade:</span> 20</p>
+                            <p><span class="bold">Altura:</span> 1.92</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>        
+      </section>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="content-footer">
+                <ul>
+                    <li class="bold">Tópicos</li>
+                    <li><a href="#">Noticiais</a></li>
+                    <li><a href="#">Super Liga</a></li>
+                    <li><a href="#">Tabelas</a></li>
+                    <li><a href="#">Jogo</a></li>
+                    <li><a href="#">Elenco</a></li>
+                    <li><a href="#">Seleção</a></li>
+                    <li><a href="#">Masculino</a></li>
+                    <li><a href="#" >Feminino</a></li>
+                </ul>
+            </div>
+            <div id="content-footer">
+                <ul>
+                    <li class="bold">Entre em contato</li>
+                    <li>
+                        <a href="tel:+55511959595">Tel: (11)99999999</a>
+                    </li>
+                    <li>
+                        <a href="tel:+55511959595">Tel: (11)99999999</a>
+                    </li>
+                    <li>
+                        <a href="mailto:voleiparavoce@gmail.com">voleiparavoce@gmail.com</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="content-footer">
+                <ul>
+                    <li class="bold">Sobre nós</li>
+                    <li>
+                        <a href="#">Missão</a>
+                    </li>
+                    <li>
+                        <a href="#">Visão</a>
+                    </li>
+                    <li>
+                        <a href="#">Valores</a>
+                    </li>
+                    <li>
+                        <a href="#">Objetivos</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="content-footer">
+                <ul>
+                    <li class="bold">Redes</li>
+                    <figure id="content-img-footer">
+                        <li>
+                            <a href="mailto:voleiparavoce@gmail.com"><img src="assets/img/imgemail.png" alt="Ícone de e-mail"></a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/viniciusfariac"><img src="assets/img/imggithub.png" alt="Ícone do github"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="assets/img/imginsta.png" alt="Ícone do instagram"></a>
+                        </li>
+                        <li>
+                            <a href="tel:+55119999999"><img src="assets/img/imgwpp.png" alt="Ícone do WhatsApp"></a>
+                        </li>
+                    </figure>
+                </ul>
+            </div>
+        </div>
+        <div class="footer">
+            <p>© 2024 Volei Pra Você. Todos os direitos reservados. Volei para Você ltda - CNPJ: 59.546.515/0045-55 Rodovia Fernão</p>
+        </div>
+    </footer>
+    <script src="assets/script/script.js"></script>
+  </body>
+</html>
